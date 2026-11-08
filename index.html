@@ -1,602 +1,606 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#dceeff">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#dceeff">
 
-  <title>Desinformação em Saúde | Maratona Tech</title>
+    <title>Desinformação em Saúde | Maratona Tech</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-  <!-- CABEÇALHO -->
+    <!-- CABEÇALHO -->
 
-  <header class="topbar">
+    <header class="topbar">
 
-    <a href="#inicio" class="brand">
-      <span class="brand-icon">✳</span>
-      MARATONA <strong>TECH</strong>
-    </a>
+        <a href="#inicio" class="brand">
+            <span class="brand-icon">✳</span>
+            MARATONA <strong>TECH</strong>
+        </a>
 
-    <button
-      class="theme-button"
-      id="themeToggle"
-      aria-label="Ativar modo escuro">
-      ☾
-    </button>
+        <button
+            class="theme-button"
+            id="themeToggle"
+            aria-label="Ativar modo escuro">
+            ☾
+        </button>
 
-  </header>
+    </header>
 
-  <main>
+    <main>
 
-    <!-- CAPA -->
+        <!-- CAPA / TEMA -->
 
-    <section class="hero" id="inicio">
+        <section class="hero" id="inicio">
 
-      <div class="hero-content">
+            <div class="hero-content">
 
-        <span class="eyebrow">
-          MEU DILEMA DIGITAL
-        </span>
+                <span class="eyebrow">
+                    MEU DILEMA DIGITAL
+                </span>
 
-        <h1>
-          DESINFORMAÇÃO EM SAÚDE
-        </h1>
+                <h1>
+                    DESINFORMAÇÃO EM SAÚDE
+                </h1>
 
-        <p class="hero-description">
-          E OS IMPACTOS DA CIRCULAÇÃO
-          DE CONTEÚDOS ENGANOSOS NA INTERNET
-        </p>
+                <p class="hero-description">
+                    E OS IMPACTOS DA CIRCULAÇÃO
+                    DE CONTEÚDOS ENGANOSOS NA INTERNET
+                </p>
 
-      </div>
+            </div>
 
-      <div class="hero-visual">
+            <div class="hero-visual">
 
-        <div class="image-card">
+                <div class="image-card">
 
-          <div class="image-overlay">
+                    <div class="image-overlay">
 
-            <span>
-              INFORMAÇÃO E RESPONSABILIDADE
+                        <span>
+                            INFORMAÇÃO E RESPONSABILIDADE
+                        </span>
+
+                        <h2>
+                            Antes de acreditar, verifique.
+                        </h2>
+
+                        <p>
+                            A credibilidade importa mais que a popularidade.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="floating-card">
+                    <span>✓</span>
+                    Cheque a fonte
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PASSO 1: INVESTIGAÇÃO -->
+
+        <section class="research-section" id="pesquisa">
+
+            <div class="section-heading">
+
+                <span class="eyebrow blue-eyebrow">
+                    01 · INVESTIGAÇÃO
+                </span>
+
+                <h2>
+                    Entendendo o dilema digital
+                </h2>
+
+            </div>
+
+            <div class="research-grid">
+
+                <article class="info-card">
+
+                    <span class="info-number">01</span>
+
+                    <span class="info-icon">⌕</span>
+
+                    <h3>Pergunta de pesquisa</h3>
+
+                    <p>
+                        As pessoas verificam a confiabilidade
+                        das informações sobre saúde antes de
+                        acreditar nelas ou compartilhá-las?
+                    </p>
+
+                </article>
+
+                <article class="info-card hypothesis-card">
+
+                    <span class="info-number">02</span>
+
+                    <span class="info-icon">◇</span>
+
+                    <h3>Hipótese</h3>
+
+                    <p>
+                        A maioria das pessoas não verifica a
+                        confiabilidade das informações sobre
+                        saúde antes de acreditar nelas ou
+                        compartilhá-las.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+
+
+
+
+
+
+            <!-- FILTROS INTERATIVOS -->
+
+            <div class="filter-area">
+
+                <div class="filter-group">
+
+                    <label for="questionFilter">
+                        Visualizar resultados:
+                    </label>
+
+                    <select id="questionFilter">
+
+                        <option value="all">
+                            Todas as perguntas
+                        </option>
+
+                        <option value="q1">
+                            Pergunta 01
+                        </option>
+
+                        <option value="q2">
+                            Pergunta 02
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="answerFilter">
+                        Filtrar respostas:
+                    </label>
+
+                    <select id="answerFilter">
+
+                        <option value="all">
+                            Todas as respostas
+                        </option>
+
+                        <option value="Sim">
+                            Sim
+                        </option>
+
+                        <option value="Não">
+                            Não
+                        </option>
+
+                        <option value="Às vezes">
+                            Às vezes
+                        </option>
+
+                        <option value="Talvez">
+                            Talvez
+                        </option>
+
+                        <option value="Raramente">
+                            Raramente
+                        </option>
+
+                        <option value="Nunca">
+                            Nunca
+                        </option>
+
+                        <option value="influencia">
+                            Respostas que indicam influência ou dúvida
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- GRÁFICOS -->
+
+            <div class="charts-grid">
+
+
+                <!-- GRÁFICO 01 -->
+
+                <article class="chart-card" id="card-q1">
+
+                    <div class="chart-top">
+
+                        <span class="question-number">
+                            01
+                        </span>
+
+                        <span class="chart-tag">
+                            PRÁTICAS DE SAÚDE
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Recomendações encontradas na internet
+                    </h3>
+
+                    <p class="question-text">
+                        Você já utilizou um remédio caseiro,
+                        suplemento ou fez uma dieta restritiva
+                        para prevenir ou tratar uma doença após
+                        ver uma recomendação na internet?
+                    </p>
+
+                    <div class="chart-container">
+
+                        <canvas id="chartOne"></canvas>
+
+                    </div>
+
+                    <ul
+                        class="chart-legend"
+                        id="legendOne">
+                    </ul>
+
+                    <div class="chart-footer">
+
+                        <span id="totalLabelOne">
+                            Total de respostas
+                        </span>
+
+                        <strong id="totalOne">
+                            30
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="explain-button"
+                        data-target="detailOne"
+                        aria-expanded="false">
+
+                        Analisar resultado <span>↗</span>
+
+                    </button>
+
+                    <div class="result-detail" id="detailOne">
+
+                        <strong>
+                            Interpretação
+                        </strong>
+
+                        <p>
+                            A alternativa mais escolhida foi "Sim",
+                            com 10 participantes (33,3%). Em seguida,
+                            7 responderam "Não" (23,3%), 6 "Às vezes"
+                            (20%), 4 "Raramente" (13,3%) e 3 "Nunca"
+                            (10%).
+                        </p>
+
+                        <p>
+                            Ao agrupar as respostas "Sim" e "Às vezes",
+                            identificamos 16 participantes (53,3%)
+                            que relataram seguir recomendações de saúde
+                            encontradas na internet ao menos ocasionalmente.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- GRÁFICO 02 -->
+
+                <article class="chart-card" id="card-q2">
+
+                    <div class="chart-top">
+
+                        <span class="question-number">
+                            02
+                        </span>
+
+                        <span class="chart-tag">
+                            CHECAGEM DE INFORMAÇÕES
+                        </span>
+
+                    </div>
+
+                    <h3>
+                        Confiança e compartilhamento de notícias
+                    </h3>
+
+                    <p class="question-text">
+                        Você já acreditou ou compartilhou alguma
+                        notícia sobre saúde sem verificar a fonte?
+                    </p>
+
+                    <div class="chart-container">
+
+                        <canvas id="chartTwo"></canvas>
+
+                    </div>
+
+                    <ul
+                        class="chart-legend"
+                        id="legendTwo">
+                    </ul>
+
+                    <div class="chart-footer">
+
+                        <span id="totalLabelTwo">
+                            Total de respostas
+                        </span>
+
+                        <strong id="totalTwo">
+                            30
+                        </strong>
+
+                    </div>
+
+                    <button
+                        class="explain-button"
+                        data-target="detailTwo"
+                        aria-expanded="false">
+
+                        Analisar resultado <span>↗</span>
+
+                    </button>
+
+                    <div class="result-detail" id="detailTwo">
+
+                        <strong>
+                            Interpretação
+                        </strong>
+
+                        <p>
+                            As respostas "Sim" e "Não" tiveram
+                            9 participantes cada (30%).
+                            "Talvez" recebeu 6 respostas (20%),
+                            "Nunca" recebeu 4 (13,3%) e
+                            "Raramente" recebeu 2 (6,7%).
+                        </p>
+
+                        <p>
+                            O agrupamento "Sim" e "Talvez" reúne
+                            15 participantes (50%). Entretanto,
+                            a resposta "Talvez" representa incerteza
+                            e não comprova que a pessoa acreditou
+                            ou compartilhou informações sem verificar.
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <!-- FONTE E NOTA METODOLÓGICA -->
+
+            <div class="method-note">
+
+                <span>ⓘ</span>
+
+                <p>
+                    <strong>Fonte e nota metodológica:</strong>
+                    pesquisa realizada por meio de formulário
+                    com 30 participantes. Os resultados representam
+                    esta amostra e não devem ser generalizados
+                    para toda a população. Os agrupamentos são
+                    utilizados para facilitar a análise das tendências,
+                    sem modificar os dados originais.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- JUSTIFICATIVA DA ESCOLHA DOS GRÁFICOS -->
+
+        <section class="graph-justification" id="justificativa">
+
+            <span class="eyebrow blue-eyebrow">
+                02 · JUSTIFICATIVA
             </span>
 
             <h2>
-              Antes de acreditar, verifique.
+                Por que escolhí esses gráficos?
             </h2>
 
-            <p>
-              A credibilidade importa mais que a popularidade.
-            </p>
+            <div class="justification-grid">
 
-          </div>
+                <article class="justification-item">
 
-        </div>
+                    <h3>Gráfico 01 · Pizza</h3>
 
-        <div class="floating-card">
-          <span>✓</span>
-          Cheque a fonte
-        </div>
+                    <p>
+                        Foi escolhido para representar a proporção
+                        de participantes que utilizaram recomendações
+                        de saúde encontradas na internet, facilitando
+                        a visualização das respostas e das alternativas
+                        mais frequentes.
+                    </p>
 
-      </div>
+                </article>
 
-    </section>
+                <article class="justification-item">
 
+                    <h3>Gráfico 02 · Barras</h3>
 
-    <!-- PESQUISA -->
+                    <p>
+                        Foi escolhido para comparar as respostas
+                        sobre acreditar ou compartilhar notícias
+                        de saúde sem verificar a fonte, permitindo
+                        identificar diferenças entre as alternativas.
+                    </p>
 
-    <section class="research-section" id="pesquisa">
+                </article>
 
-      <div class="section-heading">
+            </div>
 
-        <span class="eyebrow blue-eyebrow">
-          01 · PESQUISA
-        </span>
+        </section>
 
-      </div>
 
-      <div class="research-grid">
+        <!-- PASSO 3: CONCLUSÃO DA PESQUISA -->
 
-        <article class="info-card">
+        <section class="conclusion-section" id="conclusao">
 
-          <span class="info-number">01</span>
-
-          <span class="info-icon">⌕</span>
-
-          <h3>Pergunta norteadora</h3>
-
-          <p>
-            As pessoas verificam a confiabilidade
-            das informações sobre saúde antes de
-            acreditar nelas ou compartilhá-las?
-          </p>
-
-        </article>
-
-        <article class="info-card hypothesis-card">
-
-          <span class="info-number">02</span>
-
-          <span class="info-icon">◇</span>
-
-          <h3>Hipótese</h3>
-
-          <p>
-            A maioria das pessoas não verifica a
-            confiabilidade das informações sobre
-            saúde antes de acreditar nelas ou
-            compartilhá-las.
-          </p>
-
-        </article>
-
-      </div>
-
-    </section>
-
-
-    <!-- RESULTADOS -->
-
-    <section class="results-section" id="resultados">
-
-      <div class="section-heading results-heading">
-
-        <span class="eyebrow blue-eyebrow">
-          02 · RESULTADOS
-        </span>
-
-        <p>
-          Respostas coletadas com 30 participantes.
-        </p>
-
-      </div>
-
-
-      <!-- INDICADORES -->
-
-      <div class="stats-grid">
-
-        <article class="stat-card">
-
-          <span class="stat-icon">♙</span>
-
-          <strong>30</strong>
-
-          <span>Participantes</span>
-
-        </article>
-
-        <article class="stat-card">
-
-          <span class="stat-icon">▤</span>
-
-          <strong>02</strong>
-
-          <span>Perguntas</span>
-
-        </article>
-
-        <article class="stat-card">
-
-          <span class="stat-icon">✓</span>
-
-          <strong>60</strong>
-
-          <span>Respostas registradas</span>
-
-        </article>
-
-      </div>
-
-
-      <!-- FILTROS INTERATIVOS -->
-
-      <div class="filter-area">
-
-        <!-- FILTRO ORIGINAL DE PERGUNTAS -->
-
-        <div class="filter-group">
-
-          <label for="questionFilter">
-            Visualizar resultados:
-          </label>
-
-          <select id="questionFilter">
-
-            <option value="all">
-              Todas as perguntas
-            </option>
-
-            <option value="q1">
-              Pergunta 01
-            </option>
-
-            <option value="q2">
-              Pergunta 02
-            </option>
-
-          </select>
-
-        </div>
-
-
-        <!-- FILTRO DE RESPOSTAS -->
-
-        <div class="filter-group">
-
-          <label for="answerFilter">
-            Filtrar respostas:
-          </label>
-
-          <select id="answerFilter">
-
-            <option value="all">
-              Todas as respostas
-            </option>
-
-            <option value="Sim">
-              Sim
-            </option>
-
-            <option value="Não">
-              Não
-            </option>
-
-            <option value="Às vezes">
-              Às vezes
-            </option>
-
-            <option value="Talvez">
-              Talvez
-            </option>
-
-            <option value="Raramente">
-              Raramente
-            </option>
-
-            <option value="Nunca">
-              Nunca
-            </option>
-
-            <option value="influencia">
-              Respostas que indicam influência ou dúvida
-            </option>
-
-          </select>
-
-        </div>
-
-      </div>
-
-
-      <!-- GRÁFICOS -->
-
-      <div class="charts-grid">
-
-
-        <!-- GRÁFICO 01 -->
-
-        <article class="chart-card" id="card-q1">
-
-          <div class="chart-top">
-
-            <span class="question-number">
-              01
+            <span class="eyebrow">
+                03 · CONCLUSÃO 
             </span>
 
-            <span class="chart-tag">
-              PRÁTICAS DE SAÚDE
-            </span>
-
-          </div>
-
-          <h3>
-            Recomendações encontradas na internet
-          </h3>
-
-          <p class="question-text">
-            Você já utilizou um remédio caseiro,
-            suplemento ou fez uma dieta restritiva
-            para prevenir ou tratar uma doença após
-            ver uma recomendação na internet?
-          </p>
-
-          <div class="chart-container">
-
-            <canvas id="chartOne"></canvas>
-
-          </div>
-
-          <ul
-            class="chart-legend"
-            id="legendOne">
-          </ul>
-
-          <div class="chart-footer">
-
-            <span id="totalLabelOne">
-              Total de respostas
-            </span>
-
-            <strong id="totalOne">
-              30
-            </strong>
-
-          </div>
-
-          <button
-            class="explain-button"
-            data-target="detailOne"
-            aria-expanded="false">
-
-            Analisar resultado <span>↗</span>
-
-          </button>
-
-          <div class="result-detail" id="detailOne">
-
-            <strong>
-              Interpretação
-            </strong>
 
             <p>
-              A alternativa mais escolhida foi "Sim",
-              com 10 participantes (33,3%). Em seguida,
-              7 responderam "Não" (23,3%), 6 "Às vezes"
-              (20%), 4 "Raramente" (13,3%) e 3 "Nunca"
-              (10%).
+                Os resultados mostram que 53,3% dos participantes
+                já utilizaram, pelo menos algumas vezes, recomendações
+                de saúde encontradas na internet. Na pergunta sobre
+                acreditar ou compartilhar notícias sem verificar
+                a fonte, as respostas ficaram divididas.
             </p>
 
             <p>
-              Ao agrupar as respostas "Sim" e "Às vezes",
-              identificamos 16 participantes (53,3%)
-              que relataram seguir recomendações de saúde
-              encontradas na internet ao menos ocasionalmente.
+                Portanto, a hipótese foi parcialmente confirmada.
+                A pesquisa evidencia a importância de verificar
+                fontes confiáveis antes de seguir recomendações
+                ou compartilhar informações sobre saúde.
             </p>
 
-          </div>
+            <div class="final-quote">
+                "Na internet, nem toda informação é confiável.
+                Verificar tambem é proteger."
+            </div>
 
-        </article>
-
-
-        <!-- GRÁFICO 02 -->
-
-        <article class="chart-card" id="card-q2">
-
-          <div class="chart-top">
-
-            <span class="question-number">
-              02
-            </span>
-
-            <span class="chart-tag">
-              CHECAGEM DE INFORMAÇÕES
-            </span>
-
-          </div>
-
-          <h3>
-            Confiança e compartilhamento de notícias
-          </h3>
-
-          <p class="question-text">
-            Você já acreditou ou compartilhou alguma
-            notícia sobre saúde sem verificar a fonte?
-          </p>
-
-          <div class="chart-container">
-
-            <canvas id="chartTwo"></canvas>
-
-          </div>
-
-          <ul
-            class="chart-legend"
-            id="legendTwo">
-          </ul>
-
-          <div class="chart-footer">
-
-            <span id="totalLabelTwo">
-              Total de respostas
-            </span>
-
-            <strong id="totalTwo">
-              30
-            </strong>
-
-          </div>
-
-          <button
-            class="explain-button"
-            data-target="detailTwo"
-            aria-expanded="false">
-
-            Analisar resultado <span>↗</span>
-
-          </button>
-
-          <div class="result-detail" id="detailTwo">
-
-            <strong>
-              Interpretação
-            </strong>
-
-            <p>
-              As respostas "Sim" e "Não" tiveram
-              9 participantes cada (30%).
-              "Talvez" recebeu 6 respostas (20%),
-              "Nunca" recebeu 4 (13,3%) e
-              "Raramente" recebeu 2 (6,7%).
-            </p>
-
-            <p>
-              O agrupamento "Sim" e "Talvez" reúne
-              15 participantes (50%). Entretanto,
-              a resposta "Talvez" representa incerteza
-              e não comprova que a pessoa acreditou
-              ou compartilhou informações sem verificar.
-            </p>
-
-          </div>
-
-        </article>
-
-      </div>
+        </section>
 
 
-      <!-- NOTA METODOLÓGICA -->
+        <!-- PASSO 4: VERIFICAÇÃO CRÍTICA DA IA -->
 
-      <div class="method-note">
+        <section class="ai-section" id="verificacao-ia">
 
-        <span>ⓘ</span>
+            <div class="ai-icon">
+                ✳
+            </div>
 
-        <p>
-          <strong>Nota metodológica:</strong>
-          os dados correspondem às respostas de
-          30 participantes. Os resultados representam
-          esta amostra e não devem ser generalizados
-          para toda a população.
+            <div class="ai-content">
 
-          Os agrupamentos são utilizados para facilitar
-          a análise das tendências, sem modificar
-          os dados originais da pesquisa.
-        </p>
-
-      </div>
-
-    </section>
+                <span class="eyebrow blue-eyebrow">
+                    04 · VERIFICAÇÃO CRÍTICA DA IA
+                </span>
 
 
-    <!-- CONCLUSÃO -->
+                <div class="ai-block">
 
-    <section class="conclusion-section">
+                    <h3>O que a IA identificou?</h3>
 
-      <span class="eyebrow">
-        03 · CONCLUSÃO DA PESQUISA
-      </span>
+                    <p>
+                        A análise apontou que a desinformação em saúde
+                        pode influenciar decisões e reforçou a importância
+                        de verificar a confiabilidade das informações.
+                    </p>
 
-      <h2>
-        Informação sobre saúde exige
-        <em>responsabilidade.</em>
-      </h2>
+                </div>
 
-      <p>
-        Os resultados mostram que 53,3% dos participantes
-        já utilizaram, pelo menos algumas vezes, recomendações
-        de saúde encontradas na internet. Entretanto, na pergunta
-        sobre acreditar ou compartilhar notícias sem verificar
-        a fonte, as respostas ficaram divididas.
-      </p>
+                <div class="ai-block">
 
-      <p>
-        Portanto, a hipótese foi parcialmente confirmada.
-        A pesquisa evidencia a importância de verificar fontes
-        confiáveis antes de seguir recomendações ou compartilhar
-        informações sobre saúde.
-      </p>
+                    <h3>Opinião da estudante</h3>
 
-      <div class="final-quote">
-        "Na internet, nem toda informação é confiável.
-        Verificar pode proteger a sua saúde."
-      </div>
+                    <p>
+                        Concordo parcialmente com a análise, pois
+                        os resultados mostram que algumas pessoas
+                        seguem recomendações encontradas na internet,
+                        mas não permitem afirmar que todos deixam
+                        de verificar as fontes.
+                    </p>
 
-    </section>
+                </div>
+
+                <div class="ai-highlight">
+
+                    <strong>Evidência da pesquisa:</strong>
+
+                    16 dos 30 participantes (53,3%) responderam
+                    "Sim" ou "Às vezes" sobre utilizar recomendações
+                    de saúde encontradas na internet.
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
 
-    <!-- ANÁLISE CRÍTICA DA IA -->
+    <!-- RODAPÉ -->
 
-    <section class="ai-section">
+    <footer class="footer">
 
-      <div class="ai-icon">
-        ✳
-      </div>
+        <div class="footer-brand">
 
-      <div class="ai-content">
+            <span>✳</span>
 
-        <span class="eyebrow blue-eyebrow">
-          04 · ANÁLISE CRÍTICA DA INTELIGÊNCIA ARTIFICIAL
-        </span>
-
-        <h2>
-          A tecnologia também precisa ser questionada.
-        </h2>
-
-        <p>
-          A inteligência artificial pode ajudar a interpretar
-          os dados e identificar padrões. Porém, sua análise
-          precisa ser comparada com as respostas reais dos
-          participantes.
-        </p>
-
-        <p>
-          Concordamos que a desinformação em saúde representa
-          um risco, mas entendemos que a IA não substitui a
-          análise humana nem fontes oficiais e profissionais
-          da área da saúde.
-        </p>
-
-        <div class="ai-highlight">
-
-          <strong>Reflexão:</strong>
-
-          utilizar a inteligência artificial exige senso crítico,
-          conferência das informações e responsabilidade.
+            MARATONA <strong>TECH</strong>
 
         </div>
 
-      </div>
+        <div class="footer-credit">
 
-    </section>
+            Criado por:
+            <strong>Karina Costa Nunes</strong>
 
-  </main>
+        </div>
 
+        <div class="footer-project">
 
-  <!-- RODAPÉ -->
+            Desinformação em Saúde · 2026
 
-  <footer class="footer">
+        </div>
 
-    <div class="footer-brand">
+        <button
+            id="backTop"
+            aria-label="Voltar ao início">
 
-      <span>✳</span>
+            ↑
 
-      MARATONA <strong>TECH</strong>
+        </button>
 
-    </div>
-
-    <div class="footer-credit">
-
-      Criado por:
-      <strong>Karina Costa Nunes</strong>
-
-    </div>
-
-    <div class="footer-project">
-
-      Desinformação em Saúde · 2026
-
-    </div>
-
-    <button
-      id="backTop"
-      aria-label="Voltar ao início">
-
-      ↑
-
-    </button>
-
-  </footer>
+    </footer>
 
 </body>
+
 </html>
